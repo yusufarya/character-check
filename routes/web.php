@@ -14,6 +14,7 @@ Route::middleware(['auth-check'])->group(function () {
     Route::get('/create-character', [CharacterCheckController::class, 'create'])->name('create-character');
     Route::post('/character-check', [CharacterCheckController::class, 'store'])->name('character-check');
     Route::get('/edit-character/{id}', [CharacterCheckController::class, 'edit'])->name('edit-character');
+    Route::get('/show-character/{id}', [CharacterCheckController::class, 'show'])->name('show-character');
     Route::put('/character-update/{id}', [CharacterCheckController::class, 'update'])->name('character-update');
     Route::post('/character-delete', [CharacterCheckController::class, 'destroy'])->name('character-delete');
     Route::get('/generate-frequency/{id}', [CharacterFrequencyController::class, 'generate'])->name('generate-frequency');

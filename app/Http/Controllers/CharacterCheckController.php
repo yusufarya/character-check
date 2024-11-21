@@ -60,7 +60,7 @@ class CharacterCheckController extends Controller
         $result = CharacterCheckModel::storeCharacter($validatedData);
 
         if($result['status'] = 'success') {
-            return $this->show($result['data']->id);
+            return redirect('/show-character/'.$result['data']->id);
         } else {
             return redirect()->back()->with('Proses gagal hubungi administrator.');
         }
@@ -117,7 +117,7 @@ class CharacterCheckController extends Controller
         $result = $characterCheckModel->updateCharacter($validatedData, $id);
 
         if($result['status'] = 'success') {
-            return $this->show($id);
+            return redirect('/show-character/'.$result['data']->id);
         } else {
             return redirect()->back()->with('Proses gagal hubungi administrator.');
         }
