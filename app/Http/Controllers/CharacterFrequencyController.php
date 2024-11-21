@@ -100,7 +100,7 @@ class CharacterFrequencyController extends Controller
                 CharacterFrequencyModel::storeCharacterFrequency($paramsFrequency);
             }
         }
-        return $this->show($char_id);
+        return redirect('/character-frequency-show/'.$char_id);
 
     }
 
@@ -153,7 +153,8 @@ class CharacterFrequencyController extends Controller
                 CharacterFrequencyModel::updateCharacterFrequency($paramsFrequency, $id);
             }
         }
-        return $this->show($char_id);
+        return redirect('/character-frequency-show/'.$char_id);
+
     }
 
     /**
