@@ -40,7 +40,7 @@ RUN npm install
 RUN npm run build
 
 # Expose the port to access the app
-EXPOSE 9000
+EXPOSE 3040
 
 # Run the Laravel development server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=9000"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3040"]
