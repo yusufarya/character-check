@@ -39,8 +39,10 @@ RUN npm install
 # RUN npm run build
 RUN npm run build
 
+# RUN php artisan migrate --seed
+
 # Expose the port to access the app
-EXPOSE 3040
+EXPOSE 8000
 
 # Run the Laravel development server
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=3040"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
