@@ -15,12 +15,6 @@ RUN apt-get update -y && \
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
 apt-get install -y nodejs
 
-# Install Yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
-    apt-get update && \
-    apt-get install -y yarn
-
 # Increase Git buffer size and force HTTP/1.1 for GitHub clone
 RUN git config --global http.postBuffer 524288000
 RUN git config --global http.version HTTP/1.1
