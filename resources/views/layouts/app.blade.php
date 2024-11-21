@@ -13,10 +13,10 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bolder" href="/">CharCheck App</a>
+          <a class="navbar-brand fw-bolder" href="/">CharCheck App</a> |
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Halaman Utama</a>
             </div>
           </div>
           <form class="d-flex" action="{{ route('logout') }}" method="POST">

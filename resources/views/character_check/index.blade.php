@@ -12,11 +12,11 @@
         <table class="table table-bordered my-3">
             <thead>
                 <tr>
-                    <th style="width: 7%">ID.</th>
+                    <th style="width: 4%">ID.</th>
                     <th>Input1</th>
                     <th>Input2</th>
                     <th class="text-end">Persentase</th>
-                    <th class="text-center" style="width: 14%;">Action</th>
+                    <th class="text-center" style="width: 25%;">Aksi</th>
                 </tr>
             </thead>
             <tbody>
