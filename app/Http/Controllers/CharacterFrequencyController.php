@@ -133,7 +133,7 @@ class CharacterFrequencyController extends Controller
         $input1 = $request->input('input1');
         $input2 = $request->input('input2');
 
-        $char_id = $request->input('char_id');
+        $char_id = $id;
         $dataParams['input1'] = $request->input('input1');
         $dataParams['input2'] = $request->input('input2');
         $dataParams['percentage'] = 0;
