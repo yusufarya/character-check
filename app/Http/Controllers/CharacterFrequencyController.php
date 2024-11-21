@@ -138,12 +138,14 @@ class CharacterFrequencyController extends Controller
         $dataParams['input2'] = $request->input('input2');
         $dataParams['percentage'] = 0;
 
-        if($char_id) {
-            $resultChar = CharacterCheckModel::find($char_id);
-        } else {
-            $resultChar = CharacterCheckModel::storeCharacter($dataParams);
-            $char_id = $resultChar['data']->id;
-        }
+        $resultChar = CharacterCheckModel::updateCharacter($dataParams, $char_id);
+
+        // if($char_id) {
+        //     $resultChar = CharacterCheckModel::find($char_id);
+        // } else {
+        //     $resultChar = CharacterCheckModel::storeCharacter($dataParams);
+        //     $char_id = $resultChar['data']->id;
+        // }
 
         if($resultChar) {
             $result = CharacterFrequencyModel::calculateCharacterFrequency($input1, $input2);
